@@ -1,0 +1,45 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: account
+  namespace: production-deployment
+  labels:
+    app: account
+    service: account
+spec:
+  ports:
+  - port: 8080
+    name: http
+  selector:
+    app: account
+  type: LoadBalancer
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: account-app
+  namespace: production-deployment
+  labels:
+    app: account
+    version: v1
+spec:
+  selector:
+    matchLabels:
+      app: account
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: account
+        version: v1
+    spec:
+      containers:
+      - name: account
+        image: docker.io/tonyfieit/account:v0.3
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+        - name: tonyfieit75-pull-secret
+
