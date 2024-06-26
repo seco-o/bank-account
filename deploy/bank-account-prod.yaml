@@ -2,7 +2,7 @@
 kind: Service
 metadata:
   name: account
-  namespace: production-deployment
+  namespace: ibm-bank
   labels:
     app: account
     service: account
@@ -18,7 +18,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: account-app
-  namespace: production-deployment
+  namespace: ibm-bank
   labels:
     app: account
     version: v1
