@@ -52,7 +52,7 @@
         <dependency>
             <groupId>org.axonframework</groupId>
             <artifactId>axon-distributed-commandbus-springcloud</artifactId>
-            <version>${axon.version}</version>
+            <version>3.4.4</version>
         </dependency>
         
         <!-- Required for STOMP with an external message broker -->
