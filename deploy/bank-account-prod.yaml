@@ -8,13 +8,12 @@ metadata:
     service: account
 spec:
   ports:
-  - port: 8080
-    name: http
+    - port: 8080
+      name: http
   selector:
     app: account
   type: LoadBalancer
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -35,11 +34,10 @@ spec:
         version: v1
     spec:
       containers:
-      - name: account
-        image: docker.io/tonyfieit/account:v0.3
-        imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 8080
+        - name: account
+          image: docker.io/src32/ibm-bank-account:v0.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
       imagePullSecrets:
         - name: tonyfieit75-pull-secret
-
