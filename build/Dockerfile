@@ -40,4 +40,4 @@ VOLUME /tmp
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=default", "/app.jar"]
+ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=default", "/app.jar", "--debug"]
