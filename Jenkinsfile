@@ -16,7 +16,7 @@ node {
 
     stage('compile') {
       withMaven {
-        sh 'mvn clean install'
+        sh 'mvn clean install -e'
       }
 
       dir('target') {
