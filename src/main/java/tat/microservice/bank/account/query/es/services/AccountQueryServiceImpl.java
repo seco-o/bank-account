@@ -28,7 +28,7 @@ import tat.microservice.bank.account.query.es.entities.AccountTransferQueryEntit
 import tat.microservice.bank.account.query.es.entities.repositories.AccountRepository;
 import tat.microservice.bank.account.query.es.entities.repositories.AccountTransferRepository;
 
-@Service @Lazy
+@Service 
 public class AccountQueryServiceImpl implements AccountQueryService {
 
 	private final Logger logger = LoggerFactory.getLogger(getClass());
