@@ -33,7 +33,7 @@
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<axon.version>3.0.4</axon.version>
+		<axon.version>4.5.8</axon.version>
 	</properties>
 
 	<dependencies>
