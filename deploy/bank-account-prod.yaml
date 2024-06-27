@@ -21,7 +21,7 @@ metadata:
   namespace: ibm-bank
   labels:
     app: account
-    version: v1
+    version: v0.2
 spec:
   selector:
     matchLabels:
@@ -31,11 +31,11 @@ spec:
     metadata:
       labels:
         app: account
-        version: v1
+        version: v0.2
     spec:
       containers:
         - name: account
-          image: docker.io/src32/ibm-bank-account:v0.1
+          image: src32/ibm-bank-account:v0.2
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
